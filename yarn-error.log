@@ -1,0 +1,131 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js install
+
+PATH: 
+  C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Users\mayerhu\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Java\jdk1.8.0_65\bin;C:\Users\showlieyang\Downloads\php;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE;C:\OpenSSL;C:\OpenSSL\bin;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_172\bin;D:\And\AppData\Local\Android\sdk1\tools;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Users\mayerhu\AppData\Local\Microsoft\WindowsApps;C:\Users\mayerhu\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\mayerhu\AppData\Local\atom\bin;C:\Users\mayerhu\AppData\Local\Yarn\bin;C:\Users\mayerhu\AppData\Local\Microsoft\WindowsApps;C:\Users\mayerhu\.dotnet\tools;D:\Users\mayerhu\AppData\Local\Programs\Microsoft VS Code\bin
+
+Yarn version: 
+  1.7.0
+
+Node version: 
+  8.9.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: read ECONNRESET
+      at _errnoException (util.js:1024:11)
+      at TLSWrap.onread (net.js:615:25)
+
+npm manifest: 
+  {
+    "name": "miao-store",
+    "version": "0.0.1",
+    "author": "Mayer <17858935985@163.com>",
+    "description": "An electron-vue project",
+    "license": null,
+    "main": "./dist/electron/main.js",
+    "scripts": {
+      "build": "node .electron-vue/build.js && electron-builder",
+      "build:dir": "node .electron-vue/build.js && electron-builder --dir",
+      "build:clean": "cross-env BUILD_TARGET=clean node .electron-vue/build.js",
+      "build:web": "cross-env BUILD_TARGET=web node .electron-vue/build.js",
+      "dev": "node .electron-vue/dev-runner.js",
+      "pack": "npm run pack:main && npm run pack:renderer",
+      "pack:main": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.main.config.js",
+      "pack:renderer": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.renderer.config.js",
+      "postinstall": ""
+    },
+    "build": {
+      "productName": "miao-store",
+      "appId": "com.example.yourapp",
+      "directories": {
+        "output": "build"
+      },
+      "files": [
+        "dist/electron/**/*"
+      ],
+      "dmg": {
+        "contents": [
+          {
+            "x": 410,
+            "y": 150,
+            "type": "link",
+            "path": "/Applications"
+          },
+          {
+            "x": 130,
+            "y": 150,
+            "type": "file"
+          }
+        ]
+      },
+      "mac": {
+        "icon": "build/icons/icon.icns"
+      },
+      "win": {
+        "icon": "build/icons/icon.ico"
+      },
+      "linux": {
+        "icon": "build/icons"
+      }
+    },
+    "dependencies": {
+      "axios": "^0.18.0",
+      "highcharts": "^7.0.0",
+      "iview": "^3.1.5",
+      "js-cookie": "^2.2.0",
+      "moment": "^2.22.2",
+      "vue": "^2.5.16",
+      "vue-electron": "^1.0.6",
+      "vue-router": "^3.0.1",
+      "vuex": "^3.0.1",
+      "vuex-electron": "^1.0.0"
+    },
+    "devDependencies": {
+      "ajv": "^6.5.0",
+      "babel-core": "^6.26.3",
+      "babel-loader": "^7.1.4",
+      "babel-plugin-transform-runtime": "^6.23.0",
+      "babel-preset-env": "^1.7.0",
+      "babel-preset-stage-0": "^6.24.1",
+      "babel-register": "^6.26.0",
+      "babili-webpack-plugin": "^0.1.2",
+      "cfonts": "^2.1.2",
+      "chalk": "^2.4.1",
+      "copy-webpack-plugin": "^4.5.1",
+      "cross-env": "^5.1.6",
+      "css-loader": "^0.28.11",
+      "del": "^3.0.0",
+      "devtron": "^1.4.0",
+      "electron": "^2.0.4",
+      "electron-debug": "^1.5.0",
+      "electron-devtools-installer": "^2.2.4",
+      "electron-builder": "^20.19.2",
+      "mini-css-extract-plugin": "0.4.0",
+      "file-loader": "^1.1.11",
+      "html-webpack-plugin": "^3.2.0",
+      "multispinner": "^0.2.1",
+      "node-loader": "^0.6.0",
+      "node-sass": "^4.9.2",
+      "sass-loader": "^7.0.3",
+      "style-loader": "^0.21.0",
+      "url-loader": "^1.0.1",
+      "vue-html-loader": "^1.2.4",
+      "vue-loader": "^15.2.4",
+      "vue-style-loader": "^4.1.0",
+      "vue-template-compiler": "^2.5.16",
+      "webpack-cli": "^3.0.8",
+      "webpack": "^4.15.1",
+      "webpack-dev-server": "^3.1.4",
+      "webpack-hot-middleware": "^2.22.2",
+      "webpack-merge": "^4.1.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
